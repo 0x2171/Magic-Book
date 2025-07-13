@@ -1,0 +1,35 @@
+<svg width="9600" height="3000" viewBox="0 0 9600 3000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Градиентный фон -->
+  <defs>
+    <linearGradient id="bookGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2c1a17"/>
+      <stop offset="50%" stop-color="#4a2e2b"/>
+      <stop offset="100%" stop-color="#1c0f0d"/>
+    </linearGradient>
+    
+    <!-- Узор из линий -->
+    <pattern id="texturePattern" patternUnits="userSpaceOnUse" width="40" height="40">
+      <path d="M 0 20 L 40 20 M 20 0 L 20 40" stroke="#5a3e3b" stroke-width="1" opacity="0.2"/>
+    </pattern>
+    
+    <!-- Декоративные элементы -->
+    <symbol id="ornament" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="40" stroke="#8b5e5c" stroke-width="4" fill="none"/>
+      <circle cx="50" cy="50" r="25" stroke="#c08483" stroke-width="2" fill="none"/>
+    </symbol>
+  </defs>
+
+  <!-- Основной фон -->
+  <rect width="9600" height="3000" fill="url(#bookGradient)"/>
+
+  <!-- Текстурный узор -->
+  <rect width="9600" height="3000" fill="url(#texturePattern)"/>
+
+  <!-- Декоративные элементы по углам -->
+  <g opacity="0.7">
+    <use href="#ornament" x="50" y="50" width="200" height="200"/>
+    <use href="#ornament" x="9350" y="50" width="200" height="200" transform="scale(-1,1) translate(-9600,0)"/>
+    <use href="#ornament" x="50" y="2750" width="200" height="200" transform="scale(1,-1) translate(0,-3000)"/>
+    <use href="#ornament" x="9350" y="2750" width="200" height="200" transform="scale(-1,-1) translate(-9600,-3000)"/>
+  </g>
+</svg>
